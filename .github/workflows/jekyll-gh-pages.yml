@@ -28,6 +28,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          BASE_PATH: '/inno8ai-solutions-hub/'
 
       - name: Create 404 page
         # This is where the magic happens. We copy index to 404 
