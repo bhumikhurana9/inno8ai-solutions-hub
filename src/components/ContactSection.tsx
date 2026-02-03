@@ -29,8 +29,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "contact@inno8ai.com",
-      href: "mailto:contact@inno8ai.com",
+      value: "vipinkhurana@inno8aisolutions.com",
+      href: "mailto:vipinkhurana@inno8aisolutions.com",
     },
     {
       icon: MapPin,
