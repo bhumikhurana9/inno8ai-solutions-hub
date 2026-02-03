@@ -23,7 +23,7 @@ const Footer = () => {
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Mail, href: "mailto:contact@inno8ai.com", label: "Email" },
+    { icon: Mail, href: "mailto:vipinkhurana@inno8aisolutions.com", label: "Email" },
   ];
 
   return (
@@ -106,8 +106,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@inno8ai.com" className="hover:text-primary transition-colors">
-                  contact@inno8ai.com
+                <a href="mailto:vipinkhurana@inno8aisolutions.com" className="hover:text-primary transition-colors">
+                  vipinkhurana@inno8aisolutions.com
                 </a>
               </li>
               <li>India</li>
