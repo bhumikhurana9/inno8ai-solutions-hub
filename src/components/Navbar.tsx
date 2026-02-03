@@ -1,14 +1,15 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "Services", href: "/#services" },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
               <span className="font-display font-bold text-primary-foreground text-lg">i8</span>
             </div>
@@ -32,18 +33,28 @@ const Navbar = () => {
               <span className="font-display font-bold text-xl text-foreground">Inno8AI</span>
               <span className="font-display font-medium text-lg text-muted-foreground ml-1">Solutions</span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm"
-              >
-                {item.name}
-              </a>
+              item.href.startsWith('/') && !item.href.includes('#') ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm"
+                >
+                  {item.name}
+                </a>
+              )
             ))}
           </nav>
 
@@ -79,17 +90,28 @@ const Navbar = () => {
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') && !item.href.includes('#') ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <Button variant="hero" size="lg" className="mt-4" asChild>
-                <a href="#contact" onClick={() => setIsOpen(false)}>Get Started</a>
+                <a href="/#contact" onClick={() => setIsOpen(false)}>Get Started</a>
               </Button>
             </nav>
           </motion.div>

@@ -1,91 +1,16 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { caseStudies, getCaseStudiesByCategory } from "@/data/caseStudies";
 
 const categories = ["All", "Web Development", "AI Solutions", "Marketing", "Platforms"];
-
-const projects = [
-  {
-    id: 1,
-    title: "SBI Youth for India",
-    category: "Web Development",
-    description: "Complete website revamp with server optimization, SEO enhancement using AI-driven keyword tools, and performance tracking for high-volume concurrent users.",
-    tech: ["WordPress", "AI SEO", "Analytics"],
-    client: "State Bank of India",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
-  },
-  {
-    id: 2,
-    title: "BotWrks.AI",
-    category: "AI Solutions",
-    description: "Full-stack development for Motherson Group with UI/UX design, custom WordPress site, server deployment, and chatbot integration capabilities.",
-    tech: ["PHP", "JavaScript", "Figma", "AI Chatbot"],
-    client: "Motherson Group",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-  },
-  {
-    id: 3,
-    title: "HelpDrive Parivar Milan",
-    category: "AI Solutions",
-    description: "AI-based missing person identification platform using facial recognition technology to reunite families. Real-time face matching with dynamic case tracking.",
-    tech: ["Python", "React", "FastAPI", "AI Facial Recognition"],
-    client: "HelpDrive Foundation",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-  },
-  {
-    id: 4,
-    title: "Anode Governance Lab",
-    category: "Web Development",
-    description: "Website redesign focusing on accessibility, mobile responsiveness, enhanced CMS flexibility, and analytics integration.",
-    tech: ["WordPress", "UI/UX", "Analytics"],
-    client: "Anode Governance Lab",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-  },
-  {
-    id: 5,
-    title: "Blended Finance Platform",
-    category: "Platforms",
-    description: "Custom dashboard solutions for improved data management and insights with real-time data integration.",
-    tech: ["Custom Development", "Dashboard", "Analytics"],
-    client: "Blended Finance for India",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-  },
-  {
-    id: 6,
-    title: "Vasudha Foundation",
-    category: "Web Development",
-    description: "Modern web presence with enhanced user experience, responsive design, and seamless navigation.",
-    tech: ["WordPress", "Responsive Design", "SEO"],
-    client: "Vasudha Foundation",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop",
-  },
-  {
-    id: 7,
-    title: "Villgro Portfolio",
-    category: "Platforms",
-    description: "Custom web solutions for Villgro, Enroute Villgro, and Climate Villgro with unified branding and portfolio management.",
-    tech: ["WordPress", "Multi-site", "Custom CMS"],
-    client: "Villgro",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-  },
-  {
-    id: 8,
-    title: "Digital Marketing Suite",
-    category: "Marketing",
-    description: "Comprehensive SEO and digital marketing solutions with global keyword optimization and Google Analytics integration.",
-    tech: ["SEO", "Google Analytics", "Marketing Tools"],
-    client: "Multiple Clients",
-    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop",
-  },
-];
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredProjects = projects.filter(
-    (project) => activeCategory === "All" || project.category === activeCategory
-  );
+  const filteredProjects = getCaseStudiesByCategory(activeCategory).slice(0, 6);
 
   return (
     <section id="portfolio" className="py-24 relative">
@@ -105,7 +30,7 @@ const PortfolioSection = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Explore our portfolio of successful projects across various industries and technologies.
+            Explore our portfolio of {caseStudies.length}+ successful projects across various industries and technologies.
           </p>
         </motion.div>
 
@@ -143,43 +68,47 @@ const PortfolioSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="glass-card rounded-2xl overflow-hidden group hover-lift"
               >
-                {/* Image */}
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/90 text-primary-foreground">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <p className="text-xs text-primary font-medium mb-2">{project.client}</p>
-                  <h3 className="font-display font-semibold text-xl text-foreground mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.slice(0, 3).map((tech, i) => (
-                      <span key={i} className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">
-                        {tech}
+                <Link 
+                  to={`/case-study/${project.id}`}
+                  className="block glass-card rounded-2xl overflow-hidden group hover-lift h-full"
+                >
+                  {/* Image */}
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/90 text-primary-foreground">
+                        {project.category}
                       </span>
-                    ))}
+                    </div>
                   </div>
-                  <button className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all">
-                    View Case Study <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <p className="text-xs text-primary font-medium mb-2">{project.client}</p>
+                    <h3 className="font-display font-semibold text-xl text-foreground mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                      {project.tagline}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.slice(0, 3).map((tech, i) => (
+                        <span key={i} className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all">
+                      View Case Study <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -191,8 +120,14 @@ const PortfolioSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-12"
+          className="text-center mt-12 flex flex-wrap justify-center gap-4"
         >
+          <Button variant="default" size="lg" asChild>
+            <Link to="/case-studies" className="group">
+              View All {caseStudies.length} Case Studies
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
           <Button variant="glassOutline" size="lg" asChild>
             <a href="#contact" className="group">
               Discuss Your Project
