@@ -8,18 +8,27 @@ import { useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import CaseStudy from "./pages/CaseStudy";
 import AllCaseStudies from "./pages/AllCaseStudies";
+import Services from "./pages/Services";
+import NGOSolutions from "./pages/solutions/NGOSolutions";
+import IndiaPage from "./pages/solutions/ngo/IndiaPage";
+import GulfPage from "./pages/solutions/ngo/GulfPage";
+import USAPage from "./pages/solutions/ngo/USAPage";
+import UKPage from "./pages/solutions/ngo/UKPage";
+import SwitzerlandPage from "./pages/solutions/ngo/SwitzerlandPage";
+import AustraliaPage from "./pages/solutions/ngo/AustraliaPage";
+import NewZealandPage from "./pages/solutions/ngo/NewZealandPage";
+import PolandPage from "./pages/solutions/ngo/PolandPage";
+import RussiaPage from "./pages/solutions/ngo/RussiaPage";
+import IranPage from "./pages/solutions/ngo/IranPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
   return null;
 };
 
@@ -34,7 +43,18 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/case-study/:id" element={<CaseStudy />} />
           <Route path="/case-studies" element={<AllCaseStudies />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/services" element={<Services />} />
+          <Route path="/solutions/ngo" element={<NGOSolutions />} />
+          <Route path="/solutions/ngo/india" element={<IndiaPage />} />
+          <Route path="/solutions/ngo/gulf" element={<GulfPage />} />
+          <Route path="/solutions/ngo/usa" element={<USAPage />} />
+          <Route path="/solutions/ngo/uk" element={<UKPage />} />
+          <Route path="/solutions/ngo/switzerland" element={<SwitzerlandPage />} />
+          <Route path="/solutions/ngo/australia" element={<AustraliaPage />} />
+          <Route path="/solutions/ngo/new-zealand" element={<NewZealandPage />} />
+          <Route path="/solutions/ngo/poland" element={<PolandPage />} />
+          <Route path="/solutions/ngo/russia" element={<RussiaPage />} />
+          <Route path="/solutions/ngo/iran" element={<IranPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
