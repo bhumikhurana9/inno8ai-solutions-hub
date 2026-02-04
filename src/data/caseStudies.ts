@@ -1,4 +1,4 @@
-import sbiYfiImage from "@/assets/projects/sbi-yfi.png";
+import sbiYfiImage from "@/assets/projects/sbi-yfi.jpg";
 import iskconPortalImage from "@/assets/projects/iskcon-portal.png";
 import tbfcDashboardImage from "@/assets/projects/tbfc-dashboard.png";
 import helpdriveImage from "@/assets/projects/helpdrive-platform.jpg";
