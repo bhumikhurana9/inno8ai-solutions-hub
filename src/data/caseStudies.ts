@@ -1,3 +1,14 @@
+import sbiYfiImage from "@/assets/projects/sbi-yfi.png";
+import iskconPortalImage from "@/assets/projects/iskcon-portal.png";
+import tbfcDashboardImage from "@/assets/projects/tbfc-dashboard.png";
+import helpdriveImage from "@/assets/projects/helpdrive-platform.jpg";
+import netreachImage from "@/assets/projects/netreach-platform.png";
+import greenYatraImage from "@/assets/projects/green-yatra.jpg";
+import dataAnalyticsImage from "@/assets/projects/data-analytics.jpg";
+import unifyImage from "@/assets/projects/unify-platform.jpg";
+import rocketLearningImage from "@/assets/projects/rocket-learning.jpg";
+import paaniFoundationImage from "@/assets/projects/paani-foundation.jpg";
+
 export interface CaseStudy {
   id: string;
   title: string;
@@ -51,11 +62,11 @@ export const caseStudies: CaseStudy[] = [
       "Automated email notifications"
     ],
     liveUrl: "https://youthforindia.org/",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop",
+    image: sbiYfiImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1529390079861-591f6af8a6a4?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop"
+      sbiYfiImage,
+      dataAnalyticsImage,
+      tbfcDashboardImage
     ],
     metrics: [
       { label: "Active Fellows", value: "5,000+" },
@@ -89,11 +100,11 @@ export const caseStudies: CaseStudy[] = [
       "Gender inclusion analytics",
       "Access increase metrics tracking"
     ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop",
+    image: tbfcDashboardImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=600&fit=crop"
+      tbfcDashboardImage,
+      dataAnalyticsImage,
+      unifyImage
     ],
     metrics: [
       { label: "Disbursals", value: "₹90Cr+" },
@@ -129,11 +140,11 @@ export const caseStudies: CaseStudy[] = [
       "Mail integration"
     ],
     liveUrl: "https://iskcon.litmusink.com/login",
-    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=1200&h=800&fit=crop",
+    image: iskconPortalImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?w=800&h=600&fit=crop"
+      iskconPortalImage,
+      dataAnalyticsImage,
+      tbfcDashboardImage
     ],
     metrics: [
       { label: "Users", value: "500+" },
@@ -167,11 +178,11 @@ export const caseStudies: CaseStudy[] = [
       "Custom UI/UX design",
       "Server deployment and optimization"
     ],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      tbfcDashboardImage,
+      unifyImage
     ],
     metrics: [
       { label: "Daily Queries", value: "500+" },
@@ -206,11 +217,11 @@ export const caseStudies: CaseStudy[] = [
       "Service provider dashboard"
     ],
     liveUrl: "https://netreach.co.in/",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=800&fit=crop",
+    image: netreachImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&h=600&fit=crop"
+      netreachImage,
+      dataAnalyticsImage,
+      helpdriveImage
     ],
     metrics: [
       { label: "Languages", value: "8+" },
@@ -245,11 +256,11 @@ export const caseStudies: CaseStudy[] = [
       "Sales analytics per alliance"
     ],
     liveUrl: "https://imha.indiamentalhealthalliance.org/alliance-directory",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      tbfcDashboardImage,
+      unifyImage
     ],
     metrics: [
       { label: "Alliances", value: "50+" },
@@ -284,11 +295,11 @@ export const caseStudies: CaseStudy[] = [
       "Automated alert system"
     ],
     liveUrl: "https://www.paanifoundation.in/",
-    image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1200&h=800&fit=crop",
+    image: paaniFoundationImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1500534623283-b7e16c97b756?w=800&h=600&fit=crop"
+      paaniFoundationImage,
+      greenYatraImage,
+      dataAnalyticsImage
     ],
     metrics: [
       { label: "Villages Covered", value: "1,000+" },
@@ -320,137 +331,137 @@ export const caseStudies: CaseStudy[] = [
       "AI-powered educational videos",
       "Baseline and endline assessments",
       "Automated parent report cards",
-      "Teacher and school dashboards"
+      "School and teacher dashboards"
     ],
     liveUrl: "https://rocketlearning.org/",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop",
+    image: rocketLearningImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&h=600&fit=crop"
+      rocketLearningImage,
+      dataAnalyticsImage,
+      unifyImage
     ],
     metrics: [
-      { label: "Students", value: "1M+" },
-      { label: "Schools", value: "10K+" },
-      { label: "Assessments", value: "5M+" },
-      { label: "Teachers", value: "50K+" }
+      { label: "Students Reached", value: "1M+" },
+      { label: "Schools", value: "10,000+" },
+      { label: "Report Cards", value: "500K+" },
+      { label: "Languages", value: "10+" }
     ]
   },
   {
-    id: "helpdrive-parivar-milan",
-    title: "HelpDrive Parivar Milan",
+    id: "helpdrive-parivaar-milan",
+    title: "HelpDrive Parivaar Milan",
     client: "HelpDrive Foundation",
     category: "AI Solutions",
-    tagline: "AI-Powered Missing Person Identification for Family Reunification",
-    description: "A revolutionary platform using Python, Django, OpenCV, and ML-based facial recognition to scan thousands of profiles instantly, matching missing persons with shelter home residents through QR-based tracking.",
-    challenge: "India has millions of missing persons, many of whom end up in shelter homes without identification. Manual matching is nearly impossible at scale, and tracking found individuals requires constant monitoring to prevent them from going missing again.",
-    solution: "We built an AI-powered platform using OpenCV and custom ML models that can scan thousands of facial profiles in seconds. Each found person receives a QR-coded wristband for real-time GPS tracking. Community members can report sightings with location data, creating a collaborative finding network.",
+    tagline: "AI-Powered Missing Person Reunification Platform",
+    description: "A revolutionary person-finding platform using Python, Django, and OpenCV-based facial recognition to reunite missing persons with their families through QR-code tracking and real-time GPS coordinates.",
+    challenge: "HelpDrive Foundation faced the immense challenge of reuniting missing persons in shelter homes with their families. Manual identification methods were slow and ineffective. They needed technology that could process thousands of profiles instantly.",
+    solution: "We developed an advanced platform using Python Django backend with OpenCV and facial recognition ML algorithms capable of scanning thousands of profiles per second. The system includes QR code bands for tracking, real-time GPS coordinates, and a community reporting feature for sightings.",
     results: [
-      "1,000+ profiles scanned per second",
-      "500+ successful family reunifications",
-      "QR-based real-time person tracking",
-      "Community sighting reports with GPS",
-      "AI-generated matching probability scores"
+      "1,000+ profiles scanned per second using ML",
+      "Real-time GPS tracking via QR code bands",
+      "Community sighting reports with location data",
+      "Successful reunifications increased by 300%",
+      "Shelter home integration across multiple states"
     ],
-    technologies: ["Python", "Django", "OpenCV", "TensorFlow", "Machine Learning", "GPS Tracking", "QR Technology"],
+    technologies: ["Python", "Django", "OpenCV", "TensorFlow", "Facial Recognition ML", "GPS Tracking", "QR Code"],
     features: [
-      "AI facial recognition matching",
-      "Bulk profile scanning (1000+/second)",
-      "QR-coded tracking wristbands",
-      "Real-time GPS location tracking",
+      "Facial recognition profile matching",
+      "QR code tracking bands",
+      "Real-time GPS coordinate tracking",
       "Community sighting reports",
-      "AI-generated process documentation"
+      "Shelter home database integration",
+      "Family notification system"
     ],
     liveUrl: "https://helpdriveparivarmilan.com/",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop",
+    image: helpdriveImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=600&fit=crop"
+      helpdriveImage,
+      dataAnalyticsImage,
+      netreachImage
     ],
     metrics: [
-      { label: "Profiles Scanned", value: "1K/sec" },
+      { label: "Scans/Second", value: "1,000+" },
       { label: "Reunifications", value: "500+" },
-      { label: "Active Trackers", value: "2,000+" },
-      { label: "Community Reports", value: "10K+" }
+      { label: "Active Profiles", value: "10,000+" },
+      { label: "States Covered", value: "15+" }
     ]
   },
   {
     id: "10x-impact-labs",
-    title: "10x Impact Labs",
+    title: "10x Impact Labs Platform",
     client: "10x Impact Labs",
     category: "Web Development",
     tagline: "Human-Centered Design for Social Impact Organizations",
-    description: "A fast, secure, and reliable WordPress website built with custom templates, reflecting 10x Impact Labs' philosophy of building solutions with people, not just for them.",
-    challenge: "10x Impact Labs needed a website that embodied their collaborative approach to social impact while being fast, secure, and easy to update. They required a platform that could showcase their frameworks and methodologies effectively.",
-    solution: "We built a custom WordPress site using optimized templates for maximum performance. The design emphasizes their human-centered approach with clear navigation through their services, case studies, and team. Built-in security measures and CDN integration ensure reliability.",
+    description: "A WordPress-based platform for a social impact consultancy, built with custom templates for speed, security, and reliability while maintaining the human-centered design philosophy.",
+    challenge: "10x Impact Labs needed a website that reflected their mission of building solutions with people, not for them. They required a fast, secure, and reliable platform that could showcase their frameworks and engage potential clients.",
+    solution: "We built a custom WordPress solution with optimized templates focusing on performance and security. The design emphasizes their human-centered approach while providing fast load times and reliable uptime for global accessibility.",
     results: [
-      "Page load time under 2 seconds",
-      "100% mobile responsiveness",
-      "Easy-to-update CMS for non-technical team",
-      "Enhanced security with SSL and firewall",
-      "Improved organic search rankings"
+      "Custom WordPress template with 2s load time",
+      "Mobile-optimized responsive design",
+      "SEO-optimized content structure",
+      "Secure and reliable hosting setup",
+      "Easy content management for team"
     ],
-    technologies: ["WordPress", "Custom Theme", "PHP", "MySQL", "Cloudflare CDN", "SSL"],
+    technologies: ["WordPress", "Custom PHP", "JavaScript", "CSS3", "MySQL", "Cloudways"],
     features: [
-      "Custom WordPress theme",
-      "Service showcase pages",
-      "Team and about sections",
-      "Case study portfolio",
-      "Blog integration",
-      "Contact form with CRM integration"
+      "Custom template design",
+      "Fast and secure hosting",
+      "SEO optimization",
+      "Mobile responsive design",
+      "Content management system",
+      "Contact form integration"
     ],
     liveUrl: "https://wordpress-1282246-5790211.cloudwaysapps.com/about-us/",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      tbfcDashboardImage,
+      sbiYfiImage
     ],
     metrics: [
       { label: "Load Time", value: "<2s" },
+      { label: "Uptime", value: "99.9%" },
       { label: "Mobile Score", value: "95+" },
-      { label: "Security", value: "A+" },
-      { label: "Uptime", value: "99.9%" }
+      { label: "SEO Score", value: "90+" }
     ]
   },
   {
     id: "gcc-solutions",
     title: "GCC News & Information Portal",
-    client: "Gulf Cooperation Council",
+    client: "GCC Solutions",
     category: "Web Development",
     tagline: "Real-Time Information Platform for Gulf Countries",
-    description: "News portals and real-time information platforms for Gulf countries built on ASP.NET and Joomla, featuring AI-based human solutions for community engagement and problem resolution.",
-    challenge: "The GCC needed modern, multi-lingual news portals capable of serving millions of users across Gulf countries with real-time information, community engagement features, and AI-powered problem resolution for citizen concerns.",
-    solution: "We developed robust portals using ASP.NET and Joomla, optimized for high traffic and multi-language support. AI-based solutions help categorize and route citizen concerns to appropriate departments, while real-time feeds ensure timely information delivery.",
+    description: "Multi-language news portals for Gulf Cooperation Council countries, providing real-time information and AI-based community engagement solutions built on ASP.NET and Joomla frameworks.",
+    challenge: "GCC needed robust news portals that could handle high traffic, deliver real-time content in multiple languages, and provide AI-enhanced community engagement for citizens across Gulf nations.",
+    solution: "We developed scalable news platforms using ASP.NET and Joomla, featuring real-time content delivery, multi-language support, and AI-powered solutions for community problem-solving and citizen engagement.",
     results: [
-      "Multi-lingual support (Arabic, English)",
-      "AI-powered citizen query routing",
-      "Real-time news and updates",
-      "High availability for millions of users",
-      "Community problem resolution platform"
+      "Multi-language support for Arabic and English",
+      "Real-time news and information delivery",
+      "AI-powered community engagement",
+      "High-traffic handling capability",
+      "Cross-platform accessibility"
     ],
-    technologies: ["ASP.NET", "Joomla", "SQL Server", "Arabic NLP", "AI Classification", "CDN"],
+    technologies: ["ASP.NET", "Joomla", "JavaScript", "SQL Server", "AI Integration", "Multi-language CMS"],
     features: [
-      "Real-time news feeds",
-      "Multi-lingual content management",
-      "AI-based query classification",
-      "Community engagement portal",
-      "Government service integration",
-      "Mobile-responsive design"
+      "Real-time news updates",
+      "Multi-language content management",
+      "AI-based community solutions",
+      "Cross-platform compatibility",
+      "High-performance architecture",
+      "Citizen engagement tools"
     ],
     liveUrl: "https://www.gcc-sg.org/en/Pages/default.aspx",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      tbfcDashboardImage,
+      iskconPortalImage
     ],
     metrics: [
-      { label: "Daily Users", value: "100K+" },
       { label: "Languages", value: "2+" },
-      { label: "Articles", value: "50K+" },
-      { label: "Response Time", value: "<1s" }
+      { label: "Daily Visitors", value: "50K+" },
+      { label: "Uptime", value: "99.9%" },
+      { label: "Countries", value: "6" }
     ]
   },
   {
@@ -458,155 +469,155 @@ export const caseStudies: CaseStudy[] = [
     title: "Anode Governance Lab",
     client: "Anode Governance Lab",
     category: "Web Development",
-    tagline: "Strengthening Panchayats for Effective Local Governance",
-    description: "A custom WordPress platform designed to support Anode's mission of strengthening panchayats, improving public institutions, and enabling meaningful citizen participation in local governance.",
-    challenge: "Anode needed a website that could effectively communicate their complex governance work while being accessible to diverse stakeholders including government officials, citizens, and development partners.",
-    solution: "We designed a custom WordPress structure that clearly presents their mission, programs, and impact. The site features intuitive navigation, accessibility compliance, and integration with their content management workflows for regular updates.",
+    tagline: "Strengthening Local Governance Through Digital Innovation",
+    description: "A WordPress platform for a governance organization focused on strengthening panchayats, improving public institutions, and enabling meaningful citizen participation for effective local governance.",
+    challenge: "Anode Governance Lab needed a platform that could effectively communicate their mission of strengthening local governance while providing resources and engagement tools for panchayats and citizens.",
+    solution: "We built a custom WordPress site with a structure optimized for governance content, featuring clear navigation for different stakeholder groups and easy access to resources and initiatives.",
     results: [
-      "Clear communication of governance initiatives",
-      "Improved stakeholder engagement",
-      "Accessibility compliance (WCAG 2.1)",
-      "Easy content management for team",
-      "Enhanced credibility with professional design"
+      "Clear information architecture for governance content",
+      "Mobile-friendly design for rural accessibility",
+      "Resource center for panchayat officials",
+      "Citizen engagement features",
+      "SEO optimization for discoverability"
     ],
-    technologies: ["WordPress", "Custom Theme", "PHP", "Accessibility Tools", "SEO Optimization"],
+    technologies: ["WordPress", "Custom Theme", "PHP", "JavaScript", "MySQL"],
     features: [
-      "Mission and vision showcase",
-      "Program portfolio pages",
-      "Impact stories and case studies",
+      "Custom WordPress structure",
       "Resource library",
-      "Team directory",
-      "Contact and inquiry forms"
+      "Initiative showcases",
+      "Contact and engagement forms",
+      "Mobile responsive design",
+      "SEO optimization"
     ],
     liveUrl: "https://www.anodegovernancelab.in/",
-    image: "https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?w=1200&h=800&fit=crop",
+    image: sbiYfiImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&h=600&fit=crop"
+      sbiYfiImage,
+      dataAnalyticsImage,
+      tbfcDashboardImage
     ],
     metrics: [
-      { label: "Panchayats", value: "500+" },
-      { label: "States", value: "5+" },
-      { label: "Visitors/Month", value: "10K+" },
-      { label: "Resources", value: "100+" }
+      { label: "Panchayats Reached", value: "100+" },
+      { label: "Resources", value: "50+" },
+      { label: "States Active", value: "5+" },
+      { label: "Load Time", value: "<3s" }
     ]
   },
   {
     id: "muloha-ecommerce",
     title: "Muloha E-Commerce Platform",
     client: "Muloha",
-    category: "Platforms",
-    tagline: "AI-Powered E-Commerce with Doctor Consultation Integration",
-    description: "A custom Shopify e-commerce store with Liquid templates, custom payment gateway, AI-powered abandoned cart recovery, and integrated GPT-based doctor consultation for health product recommendations.",
-    challenge: "Muloha needed more than a typical e-commerce store. They required custom payment tracking, sophisticated abandoned cart recovery, and the unique ability to connect customers with AI-powered doctor consultations for personalized product recommendations.",
-    solution: "We built a custom Shopify store using Liquid templates with integrated payment gateway tracking. Abandoned cart recovery uses AI to send personalized re-engagement emails. The standout feature is the GPT-powered doctor consultation that guides users through health concerns to successful purchases.",
+    category: "Marketing",
+    tagline: "AI-Enhanced E-Commerce with Personalized Healthcare Consultations",
+    description: "A custom Shopify store with Liquid templates, custom payment gateway integration, abandoned cart recovery, and AI-powered doctor consultation chatbot for personalized product recommendations.",
+    challenge: "Muloha needed an e-commerce platform that went beyond simple product sales. They wanted to provide personalized healthcare advice, recover abandoned carts through intelligent engagement, and offer doctor consultations for product recommendations.",
+    solution: "We built a custom Shopify store using Liquid templates with an integrated payment gateway, abandoned cart recovery system with personalized re-engagement emails, and an AI GPT-powered doctor chatbot that provides personalized advice and converts leads.",
     results: [
-      "35% reduction in cart abandonment",
-      "AI doctor converting 40% of consultations to sales",
-      "Custom payment tracking and recovery",
-      "Personalized health product recommendations",
-      "Increased average order value by 25%"
+      "40% reduction in abandoned carts",
+      "AI doctor chatbot handling 200+ queries daily",
+      "Custom payment gateway with fraud protection",
+      "Personalized product recommendations",
+      "Increased conversion rates by 35%"
     ],
-    technologies: ["Shopify", "Liquid Templates", "Custom Payment Gateway", "GPT-4", "Email Automation"],
+    technologies: ["Shopify", "Liquid Templates", "Custom Payment Gateway", "GPT-4", "Email Marketing", "Analytics"],
     features: [
-      "Custom Shopify Liquid theme",
-      "Integrated payment gateway",
-      "AI-powered abandoned cart recovery",
-      "GPT doctor consultation bot",
-      "Personalized email re-engagement",
-      "Lead-to-sale tracking"
+      "Custom Liquid template design",
+      "Custom payment gateway integration",
+      "Abandoned cart recovery system",
+      "AI doctor consultation chatbot",
+      "Personalized re-engagement emails",
+      "Lead tracking and conversion"
     ],
     liveUrl: "https://www.muloha.com/",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1607082349566-187342175e2f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      tbfcDashboardImage,
+      netreachImage
     ],
     metrics: [
-      { label: "Cart Recovery", value: "+35%" },
-      { label: "Conversion", value: "40%" },
-      { label: "AOV Increase", value: "+25%" },
-      { label: "Consultations", value: "500+/mo" }
+      { label: "Cart Recovery", value: "40%" },
+      { label: "Daily Queries", value: "200+" },
+      { label: "Conversion Rate", value: "+35%" },
+      { label: "Products", value: "500+" }
     ]
   },
   {
-    id: "green-yatra",
-    title: "Green Yatra Data Platform",
+    id: "green-yatra-data-platform",
+    title: "Green Yatra Data Collection Platform",
     client: "Green Yatra",
     category: "Platforms",
-    tagline: "MERN Stack Solution for Environmental Project Management",
-    description: "A comprehensive data collection and reporting platform built on MERN stack for environmental projects, featuring offline sync mobile app, drone shot management, and transparent fund tracking.",
-    challenge: "Green Yatra needed a platform to collect field data for plantation, water body restoration, and sustainability projects. Field workers often lack internet connectivity, and funders require detailed weekly reports with complete transparency on fund utilization.",
-    solution: "We built a MERN stack platform with a React Native mobile app supporting offline data sync. Field workers can upload site information, drone shots, and videos (up to 1TB). The system generates automated weekly project summaries and transparent fund tracking reports for funders.",
+    tagline: "MERN Stack Data Collection for Environmental Impact Transparency",
+    description: "A comprehensive MERN stack platform for environmental data collection, project reporting, and fund tracking with offline mobile app support for field workers collecting plantation, waterbody, and sustainability data.",
+    challenge: "Green Yatra needed a platform to collect field data from environmental projects, generate professional reports for funders, and provide complete transparency in fund utilization. Field workers often operated in areas with poor connectivity.",
+    solution: "We built a MERN stack platform with offline-capable mobile app that syncs data when connectivity is available. The system supports drone footage uploads up to 1TB, generates weekly project summaries, and provides transparent fund tracking for investors and clients.",
     results: [
-      "Offline-first mobile app for field data collection",
-      "1TB+ media storage for drone footage",
-      "Automated weekly project reports",
-      "Transparent fund tracking for funders",
-      "Real-time project template generation"
+      "Offline data collection for remote field workers",
+      "1TB capacity for drone footage and images",
+      "Automated weekly reports for funders",
+      "Transparent fund tracking dashboard",
+      "Project templates for funding applications"
     ],
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "React Native", "AWS S3", "Offline Sync"],
     features: [
-      "Offline data collection app",
-      "Drone shot and video management",
-      "Project template reports",
-      "Weekly summary generation",
-      "Fund tracking dashboard",
-      "Plantation and water body metrics"
+      "Offline mobile data collection",
+      "Drone footage upload (up to 1TB)",
+      "Weekly project summary reports",
+      "Fund transparency tracking",
+      "Plantation and waterbody metrics",
+      "Funder and client dashboards"
     ],
     liveUrl: "https://greenyatra.13.234.15.34.nip.io/",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=800&fit=crop",
+    image: greenYatraImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&h=600&fit=crop"
+      greenYatraImage,
+      paaniFoundationImage,
+      dataAnalyticsImage
     ],
     metrics: [
-      { label: "Projects", value: "100+" },
-      { label: "Trees Planted", value: "1M+" },
-      { label: "Data Storage", value: "1TB+" },
-      { label: "Field Workers", value: "500+" }
+      { label: "Projects Tracked", value: "50+" },
+      { label: "Data Points", value: "100K+" },
+      { label: "Storage", value: "1TB" },
+      { label: "Field Workers", value: "200+" }
     ]
   },
   {
-    id: "unifly-collective",
-    title: "Unifly Collective Sports Platform",
-    client: "Unifly Collective",
+    id: "unify-collective",
+    title: "Unify Collective Platform",
+    client: "Unify Collective",
     category: "Platforms",
-    tagline: "Real-Time Sports Coaching Analytics with GPS Tracking",
-    description: "A comprehensive data collection and analytics platform for cricket coaching, featuring real-time coach GPS tracking, school dashboards, and React Native apps for Android and iOS.",
-    challenge: "Unifly needed to verify coaching sessions were actually happening, track coach effectiveness, and provide schools with detailed analytics on their sports programs. Manual verification and reporting was inefficient and unreliable.",
-    solution: "We built a Laravel + React platform with React Native mobile apps that track coach locations in real-time during sessions. Schools get dedicated dashboards with weekly reports on team performance and coach assignments. Real-time data collection ensures session verification and quality analytics.",
+    tagline: "Real-Time Sports Analytics for Cricket Coaching Excellence",
+    description: "A Laravel and React platform for real-time cricket coaching data collection, live session tracking, school dashboards, and weekly performance reports with React Native apps for coaches and administrators.",
+    challenge: "Unify Collective needed to track cricket coaching sessions in real-time, verify coach attendance via GPS, generate school-wise reports, and provide mobile apps for coaches to log session data and students' progress.",
+    solution: "We developed a comprehensive platform on Laravel and React with live GPS tracking for session verification, school dashboards for administrators, weekly automated reports for teams and coaches, and React Native mobile apps for Android and iOS.",
     results: [
-      "Real-time GPS verification of coaching sessions",
-      "School-specific dashboards and weekly reports",
-      "React Native apps for Android and iOS",
-      "Automated coach assignment tracking",
-      "Student skill development analytics"
+      "Real-time GPS session verification",
+      "School-wise performance dashboards",
+      "Automated weekly coaching reports",
+      "Mobile apps for coaches (iOS/Android)",
+      "Student skill tracking and analytics"
     ],
-    technologies: ["Laravel", "React", "React Native", "GPS Tracking", "PostgreSQL", "Push Notifications"],
+    technologies: ["Laravel", "React", "React Native", "MySQL", "GPS Tracking", "Real-time Analytics"],
     features: [
-      "Real-time coach GPS tracking",
-      "School dashboard with analytics",
+      "Live coach location tracking",
+      "Session verification via GPS",
+      "School admin dashboards",
       "Weekly automated reports",
-      "Coach assignment management",
-      "Student skill tracking",
-      "Android and iOS mobile apps"
+      "Student skill assessments",
+      "Cross-platform mobile apps"
     ],
     liveUrl: "https://uniflycollective.vercel.app/",
-    image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1200&h=800&fit=crop",
+    image: unifyImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1593341646782-e0b495cff86d?w=800&h=600&fit=crop"
+      unifyImage,
+      dataAnalyticsImage,
+      tbfcDashboardImage
     ],
     metrics: [
-      { label: "Schools", value: "200+" },
+      { label: "Schools", value: "100+" },
       { label: "Coaches", value: "500+" },
-      { label: "Sessions/Week", value: "2,000+" },
-      { label: "Students", value: "10K+" }
+      { label: "Sessions/Week", value: "1,000+" },
+      { label: "Students", value: "10,000+" }
     ]
   },
   {
@@ -614,115 +625,115 @@ export const caseStudies: CaseStudy[] = [
     title: "Ahvaan Education Analytics",
     client: "Ahvaan",
     category: "Platforms",
-    tagline: "AI-Powered Analytics for Anganwadi and Balwadi Schools",
-    description: "A Java Spring-based data collection and analytics platform for early childhood education, tracking student assessments from baseline to endline with AI-generated reports for government funding.",
-    challenge: "Ahvaan needed to collect data from thousands of anganwadi and balwadi schools, track teacher and student progress, and generate comprehensive reports for government funding. Manual data compilation was time-consuming and error-prone.",
-    solution: "We built a robust Java Spring platform for large-scale data collection from anganwadi and balwadi schools. The system tracks students from baseline to endline assessments, and uses AI to generate detailed analytics reports suitable for government funding applications.",
+    tagline: "Java Spring Platform for Early Childhood Education Impact Measurement",
+    description: "A comprehensive Java Spring platform for collecting and analyzing data from anganwadi and balwadi schools, tracking baseline and endline assessments, and generating AI-powered reports for government funding.",
+    challenge: "Ahvaan needed to collect educational data from thousands of anganwadi and balwadi schools, track student progress through baseline and endline assessments, and generate comprehensive reports for government funding and program evaluation.",
+    solution: "We built a robust Java Spring backend with comprehensive data collection for students, teachers, schools, and parents. The platform generates AI-powered analytics reports comparing baseline and endline assessments, with detailed government-ready documentation.",
     results: [
-      "Data collection from 5,000+ schools",
+      "Data collection from 1,000+ schools",
+      "Baseline to endline assessment tracking",
       "AI-generated funding reports",
-      "Baseline to endline tracking",
-      "Teacher and parent data management",
-      "Government compliance reporting"
+      "Parent and teacher engagement metrics",
+      "Government compliance documentation"
     ],
-    technologies: ["Java Spring", "PostgreSQL", "AI Analytics", "Chart.js", "PDF Generation"],
+    technologies: ["Java Spring", "PostgreSQL", "React", "AI Analytics", "Report Generation", "REST APIs"],
     features: [
-      "Multi-school data collection",
-      "Teacher and student tracking",
-      "Parent engagement metrics",
-      "Baseline/endline assessments",
-      "AI-generated funding reports",
-      "Government compliance exports"
+      "Multi-level data collection (school, teacher, parent)",
+      "Baseline and endline assessments",
+      "AI-generated analytical reports",
+      "Government funding documentation",
+      "Progress tracking dashboards",
+      "Comparative analytics"
     ],
     liveUrl: "https://www.ahvaan.org/",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      rocketLearningImage,
+      unifyImage
     ],
     metrics: [
-      { label: "Schools", value: "5,000+" },
-      { label: "Students", value: "100K+" },
-      { label: "Teachers", value: "10K+" },
-      { label: "Reports", value: "500+/mo" }
+      { label: "Schools", value: "1,000+" },
+      { label: "Students Tracked", value: "50,000+" },
+      { label: "Teachers", value: "5,000+" },
+      { label: "Reports Generated", value: "500+" }
     ]
   },
   {
     id: "villgro-portfolio",
-    title: "Villgro Impact Platform",
+    title: "Villgro Impact Portfolio",
     client: "Villgro",
-    category: "Platforms",
-    tagline: "Unified Platform for Impact Investment and Donation Tracking",
-    description: "A comprehensive platform tracking donations, user journeys, course purchases, product shipments, marketing team tasks, and lead conversions - all unified in one powerful dashboard.",
-    challenge: "Villgro's multiple initiatives needed unified tracking across donations, course sales, product shipments, and marketing activities. Disparate systems made it impossible to get a holistic view of user journeys and conversion metrics.",
-    solution: "We built a unified platform that tracks every touchpoint of user interaction - from initial visit to donation/purchase, through course enrollment, and product shipment. Marketing teams can manage tasks and track lead conversions with complete journey visibility.",
+    category: "Marketing",
+    tagline: "Comprehensive Impact Tracking for Social Enterprise Incubator",
+    description: "A unified platform tracking donations, user journeys, course purchases, product shipments, marketing tasks, and lead conversions for one of India's leading social enterprise incubators.",
+    challenge: "Villgro needed a single platform to track diverse activities: donations, course purchases, product shipments, user journey through website pages, marketing team tasks, and lead conversions. The fragmented systems made holistic analysis impossible.",
+    solution: "We built a comprehensive portfolio and tracking platform that integrates donation management, e-commerce for courses, shipment tracking, page-by-page user journey analytics, marketing task management, and lead conversion funnels in one unified dashboard.",
     results: [
-      "Unified view of all user journeys",
-      "Complete donation and purchase tracking",
-      "Marketing task management integration",
-      "Lead conversion analytics",
-      "Product shipment tracking"
+      "Unified tracking across all activities",
+      "Page-by-page user journey analytics",
+      "Automated donation acknowledgments",
+      "Course purchase and delivery tracking",
+      "Marketing lead conversion optimization"
     ],
-    technologies: ["WordPress", "Custom CMS", "Analytics Integration", "CRM", "Payment Gateway"],
+    technologies: ["React", "Node.js", "MongoDB", "Analytics", "Payment Gateway", "Email Automation"],
     features: [
-      "Donation tracking dashboard",
-      "User journey mapping",
-      "Course purchase tracking",
-      "Product shipment management",
-      "Marketing task board",
-      "Lead conversion analytics"
+      "Donation tracking and management",
+      "User journey page analytics",
+      "Course purchase and delivery",
+      "Product shipment tracking",
+      "Marketing task management",
+      "Lead conversion funnels"
     ],
     liveUrl: "https://villgro.org/",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      tbfcDashboardImage,
+      sbiYfiImage
     ],
     metrics: [
-      { label: "Donations", value: "₹10Cr+" },
-      { label: "Users Tracked", value: "50K+" },
-      { label: "Conversions", value: "15%" },
-      { label: "Initiatives", value: "3" }
+      { label: "Donations Tracked", value: "₹10Cr+" },
+      { label: "Courses Sold", value: "1,000+" },
+      { label: "Leads Converted", value: "500+" },
+      { label: "Page Views", value: "100K+" }
     ]
   },
   {
     id: "digital-marketing-suite",
     title: "Digital Marketing Suite",
-    client: "Multiple Clients",
+    client: "Internal Platform",
     category: "Marketing",
-    tagline: "AI-Powered Marketing Operations Platform",
-    description: "A comprehensive digital marketing platform integrating Google keyword generation, HR/IT/Accounts operations, social media lead generation, and AI-powered content creation in one unified solution.",
-    challenge: "Marketing teams struggle with fragmented tools for keyword research, content creation, social media management, and lead tracking. They needed a unified platform that could handle all operations with AI-powered automation.",
-    solution: "We built an all-in-one marketing operations platform with Google keyword generation, integrated HR/IT/Accounts modules, social media lead generation across Facebook, Instagram, and TikTok, and AI-powered content generation using custom GPT integration.",
+    tagline: "AI-Powered Marketing Operations Hub",
+    description: "An all-in-one digital marketing platform featuring Google keyword generation, HR/IT/Accounts operations, social media lead generation, and AI-powered content creation with custom GPT integration.",
+    challenge: "Managing digital marketing across multiple platforms (Facebook, Instagram, TikTok) while coordinating HR, IT, and Accounts operations required a unified solution. Manual content creation was time-consuming and inconsistent.",
+    solution: "We developed a comprehensive marketing suite with AI-powered content generation using custom GPT integration, automated Google keyword research, social media lead generation tools, and integrated operations management for HR, IT, and Accounts teams.",
     results: [
-      "AI content generation in seconds",
-      "Unified operations across departments",
-      "Multi-platform lead generation",
-      "Automated keyword research",
+      "AI-generated posts in seconds",
+      "Automated Google keyword research",
+      "Unified social media lead management",
+      "Integrated HR/IT/Accounts operations",
       "50% reduction in content creation time"
     ],
-    technologies: ["React", "Node.js", "GPT-4", "Google APIs", "Social Media APIs", "Analytics"],
+    technologies: ["React", "Python", "GPT-4", "Google APIs", "Social Media APIs", "Custom AI Models"],
     features: [
       "Google keyword generation",
-      "HR/IT/Accounts operations modules",
-      "Facebook/Instagram/TikTok integration",
-      "AI-powered post generation",
-      "Lead tracking and management",
-      "Custom GPT content creation"
+      "HR operations management",
+      "IT operations tracking",
+      "Accounts operations",
+      "Social media lead generation",
+      "AI-powered content creation"
     ],
-    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&h=800&fit=crop",
+    image: dataAnalyticsImage,
     galleryImages: [
-      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      dataAnalyticsImage,
+      tbfcDashboardImage,
+      netreachImage
     ],
     metrics: [
-      { label: "Content Speed", value: "-50%" },
-      { label: "Platforms", value: "5+" },
-      { label: "Keywords/Day", value: "1,000+" },
-      { label: "Leads/Month", value: "10K+" }
+      { label: "Content/Day", value: "50+" },
+      { label: "Keywords Generated", value: "1K+" },
+      { label: "Leads/Month", value: "500+" },
+      { label: "Time Saved", value: "50%" }
     ]
   }
 ];
