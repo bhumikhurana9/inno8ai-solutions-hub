@@ -44,7 +44,7 @@ const AboutSection = () => {
               Building the Future with <span className="gradient-text">Intelligent Technology</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Inno8AI Solutions Pvt Ltd is a technology-driven company specializing in web development, 
+              Inno8AI Solutions is a technology-driven company specializing in web development, 
               AI implementation, data analytics, and digital marketing solutions. With over 8 years of 
               experience, we've helped businesses transform their digital presence and streamline operations.
             </p>
