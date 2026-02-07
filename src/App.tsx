@@ -5,10 +5,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import CaseStudy from "./pages/CaseStudy";
 import AllCaseStudies from "./pages/AllCaseStudies";
 import Services from "./pages/Services";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NGOSolutions from "./pages/solutions/NGOSolutions";
 import IndiaPage from "./pages/solutions/ngo/IndiaPage";
 import GulfPage from "./pages/solutions/ngo/GulfPage";
@@ -33,33 +36,37 @@ const ScrollToTop = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/case-study/:id" element={<CaseStudy />} />
-          <Route path="/case-studies" element={<AllCaseStudies />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/solutions/ngo" element={<NGOSolutions />} />
-          <Route path="/solutions/ngo/india" element={<IndiaPage />} />
-          <Route path="/solutions/ngo/gulf" element={<GulfPage />} />
-          <Route path="/solutions/ngo/usa" element={<USAPage />} />
-          <Route path="/solutions/ngo/uk" element={<UKPage />} />
-          <Route path="/solutions/ngo/switzerland" element={<SwitzerlandPage />} />
-          <Route path="/solutions/ngo/australia" element={<AustraliaPage />} />
-          <Route path="/solutions/ngo/new-zealand" element={<NewZealandPage />} />
-          <Route path="/solutions/ngo/poland" element={<PolandPage />} />
-          <Route path="/solutions/ngo/russia" element={<RussiaPage />} />
-          <Route path="/solutions/ngo/iran" element={<IranPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/case-study/:id" element={<CaseStudy />} />
+            <Route path="/case-studies" element={<AllCaseStudies />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/solutions/ngo" element={<NGOSolutions />} />
+            <Route path="/solutions/ngo/india" element={<IndiaPage />} />
+            <Route path="/solutions/ngo/gulf" element={<GulfPage />} />
+            <Route path="/solutions/ngo/usa" element={<USAPage />} />
+            <Route path="/solutions/ngo/uk" element={<UKPage />} />
+            <Route path="/solutions/ngo/switzerland" element={<SwitzerlandPage />} />
+            <Route path="/solutions/ngo/australia" element={<AustraliaPage />} />
+            <Route path="/solutions/ngo/new-zealand" element={<NewZealandPage />} />
+            <Route path="/solutions/ngo/poland" element={<PolandPage />} />
+            <Route path="/solutions/ngo/russia" element={<RussiaPage />} />
+            <Route path="/solutions/ngo/iran" element={<IranPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
