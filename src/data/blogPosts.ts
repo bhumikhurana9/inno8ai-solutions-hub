@@ -1,3 +1,20 @@
+// Blog post images
+import techGovernanceHero from "@/assets/blog/tech-governance-hero.jpg";
+import vendorSelectionHero from "@/assets/blog/vendor-selection-hero.jpg";
+import saasVsCustomHero from "@/assets/blog/saas-vs-custom-hero.jpg";
+import aiRisksHero from "@/assets/blog/ai-risks-hero.jpg";
+import digitalTransformationHero from "@/assets/blog/digital-transformation-hero.jpg";
+import indiaNgoHero from "@/assets/blog/india-ngo-hero.jpg";
+import gulfNgoHero from "@/assets/blog/gulf-ngo-hero.jpg";
+import ukNgoHero from "@/assets/blog/uk-ngo-hero.jpg";
+import usaNgoHero from "@/assets/blog/usa-ngo-hero.jpg";
+import switzerlandNgoHero from "@/assets/blog/switzerland-ngo-hero.jpg";
+import australiaNgoHero from "@/assets/blog/australia-ngo-hero.jpg";
+import russiaNgoHero from "@/assets/blog/russia-ngo-hero.jpg";
+import polandNgoHero from "@/assets/blog/poland-ngo-hero.jpg";
+import iranNgoHero from "@/assets/blog/iran-ngo-hero.jpg";
+import newzealandNgoHero from "@/assets/blog/newzealand-ngo-hero.jpg";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -11,6 +28,9 @@ export interface BlogPost {
   category: string;
   tags: string[];
   featured: boolean;
+  heroImage?: string;
+  language?: string;
+  region?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -26,6 +46,7 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2026-02-05",
     readTime: "8 min read",
     featured: true,
+    heroImage: techGovernanceHero,
     content: `
 ## How Organizations Are Getting Trapped
 
@@ -204,6 +225,7 @@ With the right approach, transparency, and technical governance, organizations c
     publishedDate: "2026-02-03",
     readTime: "7 min read",
     featured: true,
+    heroImage: vendorSelectionHero,
     content: `
 ## Why Vendor Selection Matters More Than Technology Choice
 
@@ -367,6 +389,7 @@ With careful evaluation, structured governance, and transparent implementation p
     publishedDate: "2026-01-28",
     readTime: "6 min read",
     featured: false,
+    heroImage: saasVsCustomHero,
     content: `
 ## Understanding the Difference
 
@@ -507,14 +530,15 @@ Organizations that evaluate long-term scalability, governance, and integration r
     id: "4",
     title: "AI Implementation Risks Businesses Must Understand Before Adoption",
     slug: "ai-implementation-risks-businesses",
-    excerpt: "Artificial Intelligence is transforming industries across the world. However, improper implementation can create serious operational, financial, and security risks. Understanding the risks before implementation helps organizations adopt AI responsibly.",
+    excerpt: "Artificial Intelligence is transforming industries across the world. However, while AI offers enormous potential, improper implementation can create serious operational, financial, and security risks.",
     category: "AI & Technology",
-    tags: ["Artificial Intelligence", "AI Risk", "Technology Governance", "Digital Transformation"],
+    tags: ["AI", "Technology Risk", "Implementation", "Security"],
     author: "Vipin Kumar",
     authorRole: "Founder & CEO, Inno8 AI Solutions",
-    publishedDate: "2026-01-22",
+    publishedDate: "2026-01-20",
     readTime: "7 min read",
     featured: true,
+    heroImage: aiRisksHero,
     content: `
 ## The Growing Pressure to "Adopt AI Quickly"
 
@@ -650,15 +674,16 @@ Responsible AI adoption is not about implementing technology quickly — it is a
   {
     id: "5",
     title: "Why Many Digital Transformation Projects Fail — And How to Prevent It",
-    slug: "digital-transformation-project-failures-prevention",
-    excerpt: "Organizations across industries are investing heavily in digital transformation initiatives. While these initiatives promise efficiency and scalability, a large number of digital transformation projects fail to deliver their expected outcomes.",
+    slug: "digital-transformation-projects-fail-prevention",
+    excerpt: "Organizations across industries are investing heavily in digital transformation initiatives. While these initiatives promise efficiency, transparency, and scalability, a large number of digital transformation projects fail to deliver their expected outcomes.",
     category: "Digital Transformation",
-    tags: ["Digital Transformation", "Project Management", "Technology Governance", "Enterprise Solutions"],
+    tags: ["Digital Transformation", "Project Management", "Technology Strategy", "Governance"],
     author: "Vipin Kumar",
     authorRole: "Founder & CEO, Inno8 AI Solutions",
     publishedDate: "2026-01-15",
     readTime: "8 min read",
     featured: false,
+    heroImage: digitalTransformationHero,
     content: `
 ## The Reality Behind Digital Transformation Failures
 
@@ -790,11 +815,849 @@ We also provide **Technology Project Management and Vendor Oversight Services**,
 
 Digital transformation is not simply a technology upgrade — it is an organizational evolution that requires strategic planning, governance, and the right implementation partner. Organizations that invest in structured planning, vendor transparency, and long-term sustainability significantly increase their chances of achieving measurable transformation success.
     `
+  },
+  // Country-Specific Blog Posts in Native Languages
+  {
+    id: "6",
+    title: "भारत में NGO के लिए टेक्नोलॉजी समाधान: डिजिटल परिवर्तन गाइड",
+    slug: "india-ngo-technology-solutions-hindi",
+    excerpt: "भारतीय NGO के लिए डिजिटल टेक्नोलॉजी समाधान - FCRA अनुपालन, CSR रिपोर्टिंग, और डेटा संग्रह प्लेटफॉर्म के बारे में जानें।",
+    category: "Regional Solutions",
+    tags: ["India", "NGO", "FCRA", "CSR", "Hindi"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-02-06",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: indiaNgoHero,
+    language: "hi",
+    region: "India",
+    content: `
+## भारतीय NGO के लिए टेक्नोलॉजी की आवश्यकता
+
+भारत में गैर-सरकारी संगठन (NGO) आज डिजिटल क्रांति के दौर से गुजर रहे हैं। सही टेक्नोलॉजी समाधान के साथ, संगठन अपने प्रभाव को बढ़ा सकते हैं और पारदर्शिता सुनिश्चित कर सकते हैं।
+
+---
+
+## FCRA अनुपालन और रिपोर्टिंग
+
+भारतीय NGO के लिए FCRA (Foreign Contribution Regulation Act) अनुपालन महत्वपूर्ण है:
+
+- स्वचालित FCRA रिपोर्ट जनरेशन
+- विदेशी योगदान की ट्रैकिंग
+- वार्षिक रिटर्न की तैयारी
+- ऑडिट-रेडी डॉक्यूमेंटेशन
+
+---
+
+## CSR फंडिंग ट्रैकिंग
+
+कॉर्पोरेट सोशल रिस्पॉन्सिबिलिटी (CSR) फंड के प्रबंधन के लिए:
+
+- रियल-टाइम फंड यूटिलाइजेशन डैशबोर्ड
+- प्रोजेक्ट वाइज खर्च ट्रैकिंग
+- इम्पैक्ट मेट्रिक्स और रिपोर्टिंग
+- कंपनियों के लिए स्वचालित रिपोर्ट
+
+---
+
+## डेटा संग्रह समाधान
+
+फील्ड टीमों के लिए मोबाइल-फ्रेंडली डेटा कलेक्शन:
+
+- ऑफलाइन डेटा कैप्चर
+- GPS-आधारित सत्यापन
+- मल्टी-लैंग्वेज सपोर्ट (हिंदी, तमिल, मराठी, बंगाली)
+- रियल-टाइम डैशबोर्ड
+
+---
+
+## Inno8 AI Solutions के साथ काम करें
+
+हम भारतीय NGO को निम्नलिखित सेवाएं प्रदान करते हैं:
+
+- कस्टम डेटा प्लेटफॉर्म विकास
+- FCRA अनुपालन सॉफ्टवेयर
+- प्रोग्राम मॉनिटरिंग डैशबोर्ड
+- स्वचालित रिपोर्ट जनरेशन
+
+> संपर्क करें: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "7",
+    title: "حلول التكنولوجيا للمنظمات غير الربحية في دول الخليج",
+    slug: "gulf-ngo-technology-solutions-arabic",
+    excerpt: "حلول تقنية متخصصة للمؤسسات الخيرية والمنظمات غير الربحية في الإمارات والسعودية وقطر والكويت.",
+    category: "Regional Solutions",
+    tags: ["Gulf", "CSR", "UAE", "Saudi Arabia", "Arabic"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-02-05",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: gulfNgoHero,
+    language: "ar",
+    region: "Gulf",
+    content: `
+## التحول الرقمي للمنظمات الخيرية الخليجية
+
+تشهد منطقة الخليج العربي تطوراً كبيراً في مجال المسؤولية الاجتماعية للشركات (CSR) والمؤسسات الخيرية.
+
+---
+
+## المسؤولية الاجتماعية للشركات (CSR)
+
+تركز المنظمات الخليجية على:
+
+- تتبع مساهمات CSR
+- تقارير الحوكمة الشفافة
+- قياس الأثر الاجتماعي
+- الامتثال للوائح المحلية
+
+---
+
+## منصات التقارير الذكية
+
+نقدم حلولاً لـ:
+
+- لوحات معلومات تفاعلية
+- تقارير أسبوعية تلقائية
+- تحليلات البيانات في الوقت الفعلي
+- تكامل مع أنظمة ERP
+
+---
+
+## الامتثال والحوكمة
+
+ضمان الامتثال لـ:
+
+- قوانين الإمارات العربية المتحدة
+- أنظمة المملكة العربية السعودية
+- معايير قطر والكويت
+- متطلبات التدقيق
+
+---
+
+## تواصل معنا
+
+للاستشارة المجانية حول احتياجات منظمتك التقنية:
+
+> البريد الإلكتروني: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "8",
+    title: "UK Charity Technology: GDPR Compliance & Audit-Ready Solutions",
+    slug: "uk-charity-technology-gdpr-compliance",
+    excerpt: "Technology solutions for UK charities focusing on GDPR compliance, Charity Commission reporting, and audit-ready documentation systems.",
+    category: "Regional Solutions",
+    tags: ["UK", "GDPR", "Charity Commission", "Compliance", "Audit"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-02-04",
+    readTime: "7 min read",
+    featured: false,
+    heroImage: ukNgoHero,
+    language: "en",
+    region: "UK",
+    content: `
+## Technology for UK Charities: A Compliance-First Approach
+
+UK charities operate under stringent regulatory requirements from the Charity Commission, ICO (for GDPR), and various sector-specific bodies. Technology solutions must be designed with compliance at their core.
+
+---
+
+## GDPR Compliance Requirements
+
+For UK charities handling personal data, GDPR compliance is mandatory:
+
+- Data mapping and inventory systems
+- Consent management platforms
+- Subject Access Request (SAR) handling
+- Data retention and deletion policies
+- Breach notification procedures
+
+Our platforms are designed with **privacy by design** principles, ensuring your charity remains compliant with ICO requirements.
+
+---
+
+## Charity Commission Reporting
+
+Annual reporting to the Charity Commission requires:
+
+- Accurate financial records
+- Trustee information management
+- Public benefit documentation
+- Serious incident reporting
+
+We build systems that automate report generation and maintain audit trails.
+
+---
+
+## Audit-Ready Documentation
+
+UK charities face regular audits from:
+
+- External auditors
+- Grant-making bodies
+- Regulatory inspectors
+
+Our solutions provide:
+
+- Complete transaction histories
+- Role-based access controls
+- Version-controlled documents
+- Tamper-evident records
+
+---
+
+## Fundraising Regulation Compliance
+
+Compliance with the Fundraising Regulator requires:
+
+- Donor preference management
+- Communication consent tracking
+- Complaint handling systems
+- Vulnerable donor policies
+
+---
+
+## How We Support UK Charities
+
+At **Inno8 AI Solutions**, we provide:
+
+- GDPR-compliant data platforms
+- Charity Commission reporting automation
+- Secure donor management systems
+- Audit-ready documentation solutions
+
+> Contact us: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "9",
+    title: "US Nonprofit Technology: Impact Metrics & Dashboard Solutions",
+    slug: "us-nonprofit-technology-impact-metrics",
+    excerpt: "Technology solutions for American nonprofits focusing on impact measurement, IRS compliance, grant reporting, and donor analytics dashboards.",
+    category: "Regional Solutions",
+    tags: ["USA", "Nonprofit", "Impact Metrics", "IRS", "Grant Reporting"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-02-03",
+    readTime: "7 min read",
+    featured: false,
+    heroImage: usaNgoHero,
+    language: "en",
+    region: "USA",
+    content: `
+## Technology for American Nonprofits: Impact-Driven Solutions
+
+US nonprofits face unique challenges in demonstrating impact, maintaining 501(c)(3) compliance, and satisfying diverse funder requirements. The right technology solutions can transform operational efficiency while strengthening impact measurement.
+
+---
+
+## Impact Measurement & Reporting
+
+American funders increasingly demand:
+
+- Theory of Change visualization
+- Logic model tracking
+- Outcome measurement frameworks
+- Beneficiary tracking systems
+
+Our platforms enable real-time impact dashboards that satisfy foundation, corporate, and government funders.
+
+---
+
+## IRS Compliance & Form 990 Preparation
+
+501(c)(3) organizations must maintain:
+
+- Accurate financial records
+- Board governance documentation
+- Compensation reasonability records
+- Public support test calculations
+
+We build systems that simplify Form 990 preparation and maintain year-round compliance.
+
+---
+
+## Grant Management & Reporting
+
+Managing multiple grants requires:
+
+- Restricted fund accounting
+- Grant milestone tracking
+- Funder-specific report generation
+- Budget vs. actual monitoring
+
+Our grant management solutions reduce reporting burden by 60%.
+
+---
+
+## Donor Analytics & Engagement
+
+Data-driven fundraising includes:
+
+- Donor segmentation
+- Giving pattern analysis
+- Lapsed donor identification
+- Major gift prospect scoring
+
+---
+
+## State Registration & Compliance
+
+Charities operating across states must manage:
+
+- State registration renewals
+- Unified Registration Statement (URS)
+- State-specific solicitation requirements
+
+---
+
+## How We Support US Nonprofits
+
+At **Inno8 AI Solutions**, we provide:
+
+- Impact measurement platforms
+- Grant reporting automation
+- Donor CRM solutions
+- Compliance management systems
+
+> Contact us: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "10",
+    title: "Schweizer NGO-Technologie: Governance, Transparenz & ZEWO-Konformität",
+    slug: "swiss-ngo-technology-governance-zewo",
+    excerpt: "Technologielösungen für Schweizer NGOs mit Fokus auf Governance, Transparenz, ZEWO-Zertifizierung und strenge Compliance-Anforderungen.",
+    category: "Regional Solutions",
+    tags: ["Switzerland", "ZEWO", "Governance", "Transparency", "German"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-02-02",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: switzerlandNgoHero,
+    language: "de",
+    region: "Switzerland",
+    content: `
+## Technologie für Schweizer NGOs: Governance-First-Ansatz
+
+Schweizer Non-Profit-Organisationen operieren in einem der strengsten regulatorischen Umfelder der Welt. ZEWO-Zertifizierung, kantonale Vorschriften und hohe Transparenzerwartungen erfordern spezialisierte Technologielösungen.
+
+---
+
+## ZEWO-Zertifizierungsanforderungen
+
+Das ZEWO-Gütesiegel verlangt:
+
+- Transparente Mittelverwendung
+- Angemessene Verwaltungskosten
+- Effiziente Mittelbeschaffung
+- Klare Governance-Strukturen
+
+Unsere Plattformen unterstützen die kontinuierliche ZEWO-Konformität.
+
+---
+
+## Governance und Transparenz
+
+Schweizer NGOs müssen nachweisen:
+
+- Klare Entscheidungsprozesse
+- Vorstandsverantwortlichkeiten
+- Interessenkonfliktmanagement
+- Öffentliche Rechenschaftspflicht
+
+---
+
+## Finanzberichterstattung nach Swiss GAAP FER 21
+
+Gemeinnützige Organisationen folgen:
+
+- Fondsrechnung
+- Leistungsbericht
+- Rechnung über die Veränderung des Kapitals
+
+Unsere Systeme automatisieren die FER 21-konforme Berichterstattung.
+
+---
+
+## Kantonale Compliance
+
+Jeder Kanton hat spezifische Anforderungen:
+
+- Zürich: Handelsregistereinträge
+- Genf: OCPM-Registrierung
+- Basel: Stiftungsaufsicht
+
+---
+
+## Wie wir Schweizer NGOs unterstützen
+
+Bei **Inno8 AI Solutions** bieten wir:
+
+- ZEWO-konforme Berichtssysteme
+- Governance-Dokumentation
+- Transparente Spendenverwaltung
+- Automatisierte Jahresberichte
+
+> Kontaktieren Sie uns: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "11",
+    title: "Australian NFP Technology: ACNC Compliance & Impact Reporting",
+    slug: "australian-nfp-technology-acnc-compliance",
+    excerpt: "Technology solutions for Australian not-for-profits focusing on ACNC compliance, DGR requirements, and impact measurement systems.",
+    category: "Regional Solutions",
+    tags: ["Australia", "ACNC", "DGR", "NFP", "Compliance"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-02-01",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: australiaNgoHero,
+    language: "en",
+    region: "Australia",
+    content: `
+## Technology for Australian Not-For-Profits
+
+Australian charities and not-for-profits operate under the Australian Charities and Not-for-profits Commission (ACNC) framework. Technology solutions must support compliance while enabling operational efficiency.
+
+---
+
+## ACNC Compliance Requirements
+
+Registered charities must:
+
+- Submit Annual Information Statements
+- Maintain governance standards
+- Report changes within timeframes
+- Meet financial reporting obligations
+
+Our platforms automate ACNC reporting and maintain continuous compliance.
+
+---
+
+## DGR (Deductible Gift Recipient) Management
+
+For DGR-endorsed organisations:
+
+- Donation receipt generation
+- Gift fund accounting
+- ATO reporting requirements
+- Donor acknowledgment systems
+
+---
+
+## State and Territory Requirements
+
+Compliance varies by jurisdiction:
+
+- NSW: OLGR registration
+- Victoria: Consumer Affairs
+- Queensland: Fair Trading
+- WA, SA, TAS, NT, ACT requirements
+
+---
+
+## Impact Measurement for Australian Funders
+
+Australian philanthropic foundations expect:
+
+- Outcomes-based reporting
+- Social return on investment (SROI)
+- Theory of change documentation
+- Longitudinal impact tracking
+
+---
+
+## Indigenous Organisation Support
+
+For Aboriginal and Torres Strait Islander organisations:
+
+- Cultural governance frameworks
+- Community consultation tools
+- CATSI Act compliance
+- ORIC reporting systems
+
+---
+
+## How We Support Australian NFPs
+
+At **Inno8 AI Solutions**, we provide:
+
+- ACNC-compliant reporting systems
+- DGR management platforms
+- Impact measurement dashboards
+- Multi-state compliance solutions
+
+> Contact us: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "12",
+    title: "Технологии для российских НКО: Цифровизация и отчетность",
+    slug: "russia-nko-technology-digitalization",
+    excerpt: "Технологические решения для российских некоммерческих организаций: автоматизация отчетности, управление грантами и цифровая трансформация.",
+    category: "Regional Solutions",
+    tags: ["Russia", "NKO", "Digitalization", "Russian"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-01-31",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: russiaNgoHero,
+    language: "ru",
+    region: "Russia",
+    content: `
+## Технологии для российских НКО
+
+Российские некоммерческие организации сталкиваются с уникальными вызовами в области цифровизации. Правильные технологические решения могут значительно повысить эффективность работы и прозрачность отчетности.
+
+---
+
+## Автоматизация отчетности
+
+Требования к отчетности включают:
+
+- Отчеты в Минюст
+- Налоговая отчетность
+- Грантовая отчетность
+- Публичные отчеты
+
+Наши платформы автоматизируют подготовку всех видов отчетности.
+
+---
+
+## Управление грантами
+
+Для эффективного управления грантами:
+
+- Отслеживание расходов по проектам
+- Формирование промежуточных отчетов
+- Учет целевых средств
+- Контроль сроков
+
+---
+
+## Сбор данных и аналитика
+
+Современные инструменты включают:
+
+- Мобильные формы сбора данных
+- Геолокация и верификация
+- Дашборды в реальном времени
+- Автоматическая визуализация
+
+---
+
+## Работа с волонтерами
+
+Системы управления волонтерами:
+
+- Регистрация и учет
+- Планирование мероприятий
+- Учет часов работы
+- Коммуникация
+
+---
+
+## Как мы помогаем российским НКО
+
+**Inno8 AI Solutions** предлагает:
+
+- Платформы для сбора данных
+- Системы отчетности
+- Аналитические дашборды
+- Интеграция с 1С
+
+> Связаться с нами: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "13",
+    title: "Technologia dla polskich NGO: Cyfryzacja i zgodność z przepisami",
+    slug: "poland-ngo-technology-digitalization",
+    excerpt: "Rozwiązania technologiczne dla polskich organizacji pozarządowych: automatyzacja raportowania, zarządzanie projektami i zgodność z RODO.",
+    category: "Regional Solutions",
+    tags: ["Poland", "NGO", "GDPR", "RODO", "Polish"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-01-30",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: polandNgoHero,
+    language: "pl",
+    region: "Poland",
+    content: `
+## Technologia dla polskich organizacji pozarządowych
+
+Polskie NGO stoją przed wyzwaniami cyfrowej transformacji. Odpowiednie rozwiązania technologiczne mogą znacząco usprawnić działalność i zapewnić zgodność z przepisami.
+
+---
+
+## Zgodność z RODO
+
+Polskie organizacje muszą przestrzegać:
+
+- Zasad przetwarzania danych osobowych
+- Praw osób, których dane dotyczą
+- Obowiązków informacyjnych
+- Procedur zgłaszania naruszeń
+
+Nasze platformy są projektowane z myślą o zgodności z RODO.
+
+---
+
+## Raportowanie do KRS i sprawozdawczość
+
+Wymagania obejmują:
+
+- Sprawozdania finansowe
+- Sprawozdania merytoryczne
+- Rozliczenia dotacji
+- Publikację sprawozdań
+
+---
+
+## Zarządzanie dotacjami
+
+Efektywne zarządzanie projektami:
+
+- Budżetowanie i kontrola kosztów
+- Harmonogramy realizacji
+- Dokumentacja wydatków
+- Raportowanie do grantodawców
+
+---
+
+## Fundusze europejskie
+
+Projekty unijne wymagają:
+
+- Szczegółowej dokumentacji
+- Wskaźników produktu i rezultatu
+- Archiwizacji dokumentów
+- Kontroli trwałości projektu
+
+---
+
+## Jak wspieramy polskie NGO
+
+**Inno8 AI Solutions** oferuje:
+
+- Platformy do zarządzania projektami
+- Systemy raportowania
+- Rozwiązania zgodne z RODO
+- Integracje z systemami księgowymi
+
+> Kontakt: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "14",
+    title: "راهکارهای فناوری برای سازمان‌های مردم‌نهاد ایران",
+    slug: "iran-ngo-technology-solutions-farsi",
+    excerpt: "راهکارهای فناورانه برای سازمان‌های مردم‌نهاد ایرانی: مدیریت پروژه، گزارش‌دهی و تحول دیجیتال.",
+    category: "Regional Solutions",
+    tags: ["Iran", "NGO", "Digitalization", "Farsi"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-01-29",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: iranNgoHero,
+    language: "fa",
+    region: "Iran",
+    content: `
+## فناوری برای سازمان‌های مردم‌نهاد ایرانی
+
+سازمان‌های مردم‌نهاد ایرانی با چالش‌های منحصربه‌فردی در زمینه دیجیتال‌سازی مواجه هستند. راهکارهای فناورانه مناسب می‌توانند کارایی و شفافیت را به طور چشمگیری افزایش دهند.
+
+---
+
+## مدیریت پروژه
+
+ابزارهای مدیریت پروژه شامل:
+
+- برنامه‌ریزی و زمان‌بندی
+- پیگیری پیشرفت
+- مدیریت منابع
+- گزارش‌دهی خودکار
+
+---
+
+## جمع‌آوری داده‌ها
+
+سیستم‌های جمع‌آوری داده:
+
+- فرم‌های موبایل
+- کار آفلاین
+- تأیید جغرافیایی
+- داشبوردهای لحظه‌ای
+
+---
+
+## گزارش‌دهی و تحلیل
+
+قابلیت‌های گزارش‌دهی:
+
+- گزارش‌های خودکار
+- تحلیل داده‌ها
+- نمودارها و نمایش بصری
+- صدور گزارش
+
+---
+
+## شفافیت و پاسخگویی
+
+اطمینان از:
+
+- ردیابی بودجه
+- مستندسازی کامل
+- دسترسی کنترل‌شده
+- حسابرسی
+
+---
+
+## خدمات ما
+
+**Inno8 AI Solutions** ارائه می‌دهد:
+
+- پلتفرم‌های مدیریت پروژه
+- سیستم‌های جمع‌آوری داده
+- داشبوردهای تحلیلی
+- آموزش و پشتیبانی
+
+> تماس با ما: vipin@inno8aisolutions.com
+    `
+  },
+  {
+    id: "15",
+    title: "New Zealand NFP Technology: Charities Services & Te Tiriti Compliance",
+    slug: "new-zealand-nfp-technology-charities-services",
+    excerpt: "Technology solutions for New Zealand not-for-profits focusing on Charities Services compliance, Te Tiriti considerations, and impact reporting.",
+    category: "Regional Solutions",
+    tags: ["New Zealand", "Charities Services", "NFP", "Te Tiriti"],
+    author: "Vipin Kumar",
+    authorRole: "Founder & CEO, Inno8 AI Solutions",
+    publishedDate: "2026-01-28",
+    readTime: "6 min read",
+    featured: false,
+    heroImage: newzealandNgoHero,
+    language: "en",
+    region: "New Zealand",
+    content: `
+## Technology for New Zealand Not-For-Profits
+
+Aotearoa New Zealand's charitable sector operates under the Charities Act 2005 and Charities Services regulations. Technology solutions must support compliance while respecting Te Tiriti o Waitangi principles.
+
+---
+
+## Charities Services Compliance
+
+Registered charities must:
+
+- Submit Annual Returns
+- Maintain governance standards
+- Report significant changes
+- Meet financial reporting tiers (Tier 1-4)
+
+Our platforms automate Charities Services reporting requirements.
+
+---
+
+## Te Tiriti o Waitangi Considerations
+
+For organisations working with Māori communities:
+
+- Culturally appropriate data sovereignty
+- Whānau-centred service delivery
+- Partnership-based governance models
+- Te Reo Māori language support
+
+---
+
+## Financial Reporting Standards
+
+Depending on tier classification:
+
+- Tier 1: Full PBE Standards
+- Tier 2: Reduced Disclosure Regime
+- Tier 3: Simple Format Reporting - Accrual
+- Tier 4: Simple Format Reporting - Cash
+
+---
+
+## Lottery Grants Board Reporting
+
+For organisations receiving Lotteries funding:
+
+- Grant milestone tracking
+- Expenditure reporting
+- Outcome documentation
+- Audit preparation
+
+---
+
+## Privacy Act 2020 Compliance
+
+New Zealand organisations must:
+
+- Manage personal information appropriately
+- Respond to information requests
+- Notify breaches when required
+- Maintain information security
+
+---
+
+## How We Support NZ NFPs
+
+At **Inno8 AI Solutions**, we provide:
+
+- Charities Services reporting automation
+- Tier-appropriate financial systems
+- Culturally responsive platforms
+- Impact measurement solutions
+
+> Contact us: vipin@inno8aisolutions.com
+    `
   }
 ];
 
-export const getFeaturedPosts = () => blogPosts.filter(post => post.featured);
-export const getRecentPosts = (count: number = 5) => blogPosts.slice(0, count);
-export const getPostBySlug = (slug: string) => blogPosts.find(post => post.slug === slug);
-export const getPostsByCategory = (category: string) => blogPosts.filter(post => post.category === category);
-export const getAllCategories = () => [...new Set(blogPosts.map(post => post.category))];
+export const getPostBySlug = (slug: string): BlogPost | undefined => {
+  return blogPosts.find(post => post.slug === slug);
+};
+
+export const getRecentPosts = (count: number = 3): BlogPost[] => {
+  return [...blogPosts]
+    .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
+    .slice(0, count);
+};
+
+export const getFeaturedPosts = (): BlogPost[] => {
+  return blogPosts.filter(post => post.featured);
+};
+
+export const getAllCategories = (): string[] => {
+  const categories = [...new Set(blogPosts.map(post => post.category))];
+  return categories;
+};
+
+export const getPostsByCategory = (category: string): BlogPost[] => {
+  return blogPosts.filter(post => post.category === category);
+};
+
+export const getPostsByRegion = (region: string): BlogPost[] => {
+  return blogPosts.filter(post => post.region === region);
+};
+
+export const getPostsByLanguage = (language: string): BlogPost[] => {
+  return blogPosts.filter(post => post.language === language);
+};
