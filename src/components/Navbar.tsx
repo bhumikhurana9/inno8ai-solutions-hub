@@ -7,10 +7,10 @@ import { Button } from "./ui/button";
 const navItems = [
   { name: "Home", href: "/#home" },
   { name: "Services", href: "/services" },
-  { name: "Solution for NGO", href: "/solutions/ngo" },
+  { name: "TPMaaS", href: "/services/tpmaas" },
+  { name: "NGO Solutions", href: "/solutions/ngo" },
   { name: "Case Studies", href: "/case-studies" },
   { name: "Insights", href: "/blog" },
-  { name: "About", href: "/#about" },
   { name: "Contact", href: "/#contact" },
 ];
 

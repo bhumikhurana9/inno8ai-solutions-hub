@@ -23,6 +23,7 @@ import NewZealandPage from "./pages/solutions/ngo/NewZealandPage";
 import PolandPage from "./pages/solutions/ngo/PolandPage";
 import RussiaPage from "./pages/solutions/ngo/RussiaPage";
 import IranPage from "./pages/solutions/ngo/IranPage";
+import TPMaaS from "./pages/services/TPMaaS";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +51,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/services/tpmaas" element={<TPMaaS />} />
             <Route path="/solutions/ngo" element={<NGOSolutions />} />
             <Route path="/solutions/ngo/india" element={<IndiaPage />} />
             <Route path="/solutions/ngo/gulf" element={<GulfPage />} />
