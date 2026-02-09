@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
+import TPMaaSPopup from "@/components/TPMaaSPopup";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <TPMaaSPopup />
     </div>
   );
 };
