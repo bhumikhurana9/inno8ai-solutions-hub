@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Shield, ArrowRight, CheckCircle, Globe } from "lucide-react";
+import { X, Shield, ArrowRight, CheckCircle, Globe, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
@@ -30,58 +30,61 @@ const TPMaaSPopup = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleDismiss}
-            className="fixed inset-0 bg-background/60 backdrop-blur-sm z-[100]"
+            className="fixed inset-0 bg-black/70 backdrop-blur-md z-[9998]"
           />
 
-          {/* Popup */}
+          {/* Centered Popup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 40 }}
+            initial={{ opacity: 0, scale: 0.85, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 40 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed inset-4 sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 z-[101] max-w-lg w-full max-h-[90vh] overflow-y-auto"
+            exit={{ opacity: 0, scale: 0.85, y: 20 }}
+            transition={{ type: "spring", damping: 20, stiffness: 300 }}
+            className="fixed z-[9999] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-md"
           >
-            <div className="relative rounded-2xl border border-primary/30 overflow-hidden">
-              {/* Gradient border glow */}
-              <div className="absolute -inset-[1px] bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl opacity-30 blur-sm" />
-              
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
+              {/* Animated gradient border */}
+              <div className="absolute -inset-[2px] bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl opacity-60 animate-pulse-glow" />
+
               <div className="relative bg-card rounded-2xl overflow-hidden">
                 {/* Top accent bar */}
-                <div className="h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
+                <div className="h-1.5 bg-gradient-to-r from-primary via-secondary to-accent" />
 
                 {/* Close button */}
                 <button
                   onClick={handleDismiss}
-                  className="absolute top-4 right-4 w-8 h-8 rounded-full bg-muted/80 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors z-10"
+                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-muted/80 hover:bg-destructive/20 hover:text-destructive flex items-center justify-center text-muted-foreground transition-all z-10"
                 >
                   <X className="w-4 h-4" />
                 </button>
 
-                <div className="p-6 sm:p-8">
+                <div className="p-5 sm:p-6">
                   {/* Icon & Badge */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20">
-                      <Shield className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <span className="px-2 py-0.5 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider">
-                        New Service
-                      </span>
-                    </div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <motion.div
+                      animate={{ rotate: [0, 5, -5, 0] }}
+                      transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                      className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/30"
+                    >
+                      <Shield className="w-5 h-5 text-primary-foreground" />
+                    </motion.div>
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-accent/15 text-accent text-xs font-bold uppercase tracking-wider">
+                      <Sparkles className="w-3 h-3" />
+                      New Service
+                    </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 leading-tight">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1.5 leading-tight">
                     Technology Project Manager
                     <span className="gradient-text"> as a Service</span>
                   </h3>
 
-                  <p className="text-sm text-muted-foreground mb-5">
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-4 leading-relaxed">
                     Protect your technology investments with independent vendor oversight and project governance — globally.
                   </p>
 
-                  {/* Benefits */}
-                  <div className="space-y-2.5 mb-6">
+                  {/* Benefits - compact */}
+                  <div className="grid grid-cols-1 gap-1.5 mb-4">
                     {[
                       "Independent vendor-neutral governance",
                       "Architecture & security validation",
@@ -92,33 +95,33 @@ const TPMaaSPopup = () => {
                         key={i}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.3 + i * 0.1 }}
-                        className="flex items-center gap-2.5"
+                        transition={{ delay: 0.2 + i * 0.08 }}
+                        className="flex items-center gap-2"
                       >
-                        <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">{item}</span>
+                        <CheckCircle className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                        <span className="text-xs text-muted-foreground">{item}</span>
                       </motion.div>
                     ))}
                   </div>
 
                   {/* Global badge */}
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/50 mb-6">
-                    <Globe className="w-4 h-4 text-primary" />
-                    <span className="text-xs text-muted-foreground">
-                      Available across <strong className="text-foreground">India, USA, UK, Gulf, Europe, Australia & more</strong>
+                  <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/40 border border-border/50 mb-4">
+                    <Globe className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                    <span className="text-[11px] text-muted-foreground">
+                      Available across <strong className="text-foreground">India, USA, UK, Gulf, Europe & more</strong>
                     </span>
                   </div>
 
                   {/* CTAs */}
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button variant="hero" size="lg" className="flex-1" asChild onClick={handleDismiss}>
-                      <Link to="/services/tpmaas" className="inline-flex items-center gap-2">
+                  <div className="flex gap-2.5">
+                    <Button variant="hero" size="sm" className="flex-1 text-xs" asChild onClick={handleDismiss}>
+                      <Link to="/services/tpmaas" className="inline-flex items-center gap-1.5">
                         Learn More
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </Button>
-                    <Button variant="glassOutline" size="lg" className="flex-1" onClick={handleDismiss}>
-                      <a href="/#contact">Get a Free Review</a>
+                    <Button variant="glassOutline" size="sm" className="flex-1 text-xs" onClick={handleDismiss}>
+                      <a href="/#contact">Free Review</a>
                     </Button>
                   </div>
                 </div>
