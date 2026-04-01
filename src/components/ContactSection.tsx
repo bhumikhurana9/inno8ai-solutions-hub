@@ -23,14 +23,14 @@ const ContactSection = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 7023474430",
-      href: "tel:7023474430",
+      value: "+91 9694310969",
+      href: "tel:9694310969",
     },
     {
       icon: Mail,
       label: "Email",
-      value: "vipinkhurana@inno8aisolutions.com",
-      href: "mailto:vipinkhurana@inno8aisolutions.com",
+      value: "vaibhav@inno8aisolutions.com",
+      href: "mailto:vaibhav@inno8aisolutions.com",
     },
     {
       icon: MapPin,
