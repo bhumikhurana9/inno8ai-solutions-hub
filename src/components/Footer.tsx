@@ -101,13 +101,13 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-foreground mb-6">Contact Us</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li>
-                <a href="tel:7023474430" className="hover:text-primary transition-colors">
-                  +91 7023474430
+                <a href="tel:9694310969" className="hover:text-primary transition-colors">
+                  +91 9694310969
                 </a>
               </li>
               <li>
-                <a href="mailto:vipinkhurana@inno8aisolutions.com" className="hover:text-primary transition-colors">
-                  vipinkhurana@inno8aisolutions.com
+                <a href="mailto:vaibhav@inno8aisolutions.com" className="hover:text-primary transition-colors">
+                  vaibhav@inno8aisolutions.com
                 </a>
               </li>
               <li>India</li>
