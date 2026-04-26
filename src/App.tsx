@@ -25,7 +25,6 @@ import RussiaPage from "./pages/solutions/ngo/RussiaPage";
 import IranPage from "./pages/solutions/ngo/IranPage";
 import TPMaaS from "./pages/services/TPMaaS";
 import NotFound from "./pages/NotFound";
-import Maintenance from "./pages/Maintenance";
 
 const queryClient = new QueryClient();
 
@@ -46,7 +45,7 @@ const App = () => (
         <BrowserRouter basename={import.meta.env.BASE_URL}>
           <ScrollToTop />
           <Routes>
-            {/*<Route path="/" element={<Index />} />
+            <Route path="/" element={<Index />} />
             <Route path="/case-study/:id" element={<CaseStudy />} />
             <Route path="/case-studies" element={<AllCaseStudies />} />
             <Route path="/services" element={<Services />} />
@@ -64,8 +63,7 @@ const App = () => (
             <Route path="/solutions/ngo/poland" element={<PolandPage />} />
             <Route path="/solutions/ngo/russia" element={<RussiaPage />} />
             <Route path="/solutions/ngo/iran" element={<IranPage />} />
-            <Route path="*" element={<NotFound />} />*/}
-            <Route path="*" element={<Maintenance />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
